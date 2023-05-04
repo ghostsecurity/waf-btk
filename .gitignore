@@ -1,6 +1,6 @@
 .DS_Store
 .vscode
-*xfer.sh
+*.sh
 .env
 __debug_bin
 

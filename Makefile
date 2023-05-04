@@ -11,6 +11,9 @@ help: ## Prints help for targets with comments
 	@cat ${MAKEFILE_LIST} | grep "[#]# " | grep -v grep | sort | column -t -s '##' | sed -e 's/^/- /'
 	@echo ""
 
+.PHONY: test
+test: ## Run tests
+	@go test -v ./...
 
 .PHONY: run
 run: ## Run the proxy

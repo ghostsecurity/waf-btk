@@ -28,9 +28,9 @@ func RequestHandler(session *gomitmproxy.Session) (*http.Request, *http.Response
 	if req.Method == http.MethodPost {
 		switch req.Header.Get("Content-Type") {
 		case "application/json":
-			padRequestJSON(req)
+			PadRequestJSON(req)
 		default:
-			padRequest(req)
+			PadRequest(req)
 		}
 	}
 
@@ -38,7 +38,7 @@ func RequestHandler(session *gomitmproxy.Session) (*http.Request, *http.Response
 }
 
 // padRequestJSON pads a JSON POST request
-func padRequestJSON(req *http.Request) {
+func PadRequestJSON(req *http.Request) {
 	log.Println("[*] received JSON POST request")
 	if padding, ok := shouldPad(req); ok {
 		originalBody, _ := io.ReadAll(req.Body)
@@ -67,7 +67,7 @@ func padRequestJSON(req *http.Request) {
 }
 
 // padRequest pads a POST request
-func padRequest(req *http.Request) {
+func PadRequest(req *http.Request) {
 	log.Println("[*] received POST request")
 	if padding, ok := shouldPad(req); ok {
 		originalBody, _ := io.ReadAll(req.Body)
