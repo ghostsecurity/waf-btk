@@ -60,3 +60,13 @@ variable "certificate_arn" {
   description = "ACM Certificate ARN for ALB"
   default     = "arn:aws:acm:us-east-2:123456789012:certificate/8f44e833-2395-45ac-b7f8-94901a92ce74"
 }
+
+variable "zone_id" {
+  description = "Route53 Zone ID for CNAME"
+  default     = "ZZZZZZZZZZZZZZZZZZZW2"
+}
+
+variable "dns_name" {
+  description = "Route53 DNS Name for CNAME"
+  default     = "waf-btk-demo.example.com"
+}

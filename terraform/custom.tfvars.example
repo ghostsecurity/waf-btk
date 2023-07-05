@@ -1,10 +1,12 @@
 #
-# Custom Terraform vars. Set these values and rename this file to custom.tfvars.
+# Custom Terraform vars. Set these values and rename this file to `custom.tfvars`
 #
-# Then specify the custom variables file with `terraform apply -var-file=custom.tfvars
+# Then specify the custom variables file with `terraform apply -var-file=custom.tfvars`
 #
 
 key_name        = "your-aws-ssh-keypair-name"
-ip_allowlist    = ["127.0.0.1/32"]
+ip_allowlist    = ["8.8.8.8/32"]
 ipv6_allowlist  = ["fe80::9656:d028:8652:66b6/128"]
 certificate_arn = "arn:aws:acm:us-east-2:123456789012:certificate/8f44e833-2395-45ac-b7f8-94901a92ce74"
+zone_id         = "ZZZZZZZZZZZZZZZZZ6T9I"
+dns_name        = "waf-btk-demo.example.com"
