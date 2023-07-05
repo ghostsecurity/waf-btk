@@ -3,6 +3,9 @@
 *.sh
 .env
 __debug_bin
+.terraform*
+terraform.tfstate*
+custom.tfvars
 
 # If you prefer the allow list template instead of the deny list, see community template:
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
