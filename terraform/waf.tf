@@ -39,11 +39,11 @@ resource "aws_wafv2_web_acl" "block" {
         }
 
         positional_constraint = "CONTAINS"
-        search_string         = "FROM SCHEMA"
+        search_string         = "from schema"
 
         text_transformation {
           priority = 0
-          type     = "NONE"
+          type     = "LOWERCASE"
         }
       }
     }
